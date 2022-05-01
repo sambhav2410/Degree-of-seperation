@@ -6,7 +6,7 @@ export default function Header() {
       <header>
         <div className="left">
           <div className="logo">
-            <img src="./images/logo.png" />
+            <img src="./images/R.png" />
           </div>
         </div>
         <div className="right">
@@ -15,7 +15,7 @@ export default function Header() {
           </Link>
 
           <Link to="/connect">
-            <button className="btn">Connect</button>
+            <button className="btn">Relationship</button>
           </Link>
 
           <Link to="/view">

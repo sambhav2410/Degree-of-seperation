@@ -66,7 +66,7 @@ export default function Relation() {
       <section className="home">
         <div className="formcontainer">
           <form action="">
-            <h4>Connect Persons</h4>
+            <h4>Relationship</h4>
             <select type="text" placeholder="Enter Name" ref={ref}>
               <option value="">Select first Person</option>
               {state?.map((e) => (

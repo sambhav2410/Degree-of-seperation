@@ -116,7 +116,7 @@ const Box = (props) => {
 const Singlenode = (props) => {
   return (
     <>
-      <span className="indi">{props.index == 0 ? "" : ">>"}</span>
+      <span className="indi">{props.index == 0 ? "" : ">"}</span>
       <div style={{ color: "white" }} className="singlenode">
         {props.name}
       </div>
