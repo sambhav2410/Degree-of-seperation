@@ -25,7 +25,7 @@ function view(s, d) {
   return test.allPath;
 }
 function findOtherPaths(s, d, visited, path, allpath) {
-  if (s == d) {
+  if (s === d) {
     let d = [];
     for (let i = 0; i < path.length; i++) {
       d[i] = path[i];

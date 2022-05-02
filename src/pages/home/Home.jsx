@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect} from "react";
 import curd from "../../curd/curd";
 import Header from "../../components/header/Header";
 import { ToastContainer, toast } from "react-toastify";
@@ -14,7 +14,7 @@ export default function Home() {
   const ref = useRef(null);
   const add = (e) => {
     e.preventDefault();
-    if (ref.current.value == "") {
+    if (ref.current.value === "") {
       toast.error("Enter a name");
     } else {
       if (curd.readData("users", { name: ref.current.value }).length > 0) {

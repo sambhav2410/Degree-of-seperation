@@ -6,7 +6,7 @@ export default function Header() {
       <header>
         <div className="left">
           <div className="logo">
-            <img src="./images/R.png" />
+            <img src="./images/R.png" alt="" />
           </div>
         </div>
         <div className="right">

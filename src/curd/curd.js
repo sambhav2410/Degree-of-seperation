@@ -124,18 +124,18 @@ class CURD {
       var counter = 0;
       receivedKeys.forEach((receivedValues) => {
         if (receivedValues in collection[value]) {
-          if (data[receivedValues] == collection[value][receivedValues]) {
+          if (data[receivedValues] === collection[value][receivedValues]) {
             counter++;
           }
         }
       });
-      if (receivedKeys.length == counter) {
+      if (receivedKeys.length === counter) {
         var tempObj = collection[value];
         tempObj.objectId = value;
         foundObjects.push(tempObj);
       }
     });
-    if (foundObjects == "") {
+    if (foundObjects === "") {
       return [];
     } else {
       return foundObjects;
@@ -143,19 +143,19 @@ class CURD {
   }
   readData(collection = "", data = "") {
     var Data = JSON.parse(localStorage.getItem(this.env.dbname));
-    if (collection == "") {
+    if (collection === "") {
       return Data;
     } else {
       if (!this.existsCollection(collection)) {
         return new Error("Collection Not Found");
       } else {
-        if (data == "" && typeof data != "number") {
+        if (data === "" && typeof data != "number") {
           return Data[collection];
         } else {
           if (typeof data === "object") {
             return this.findData(Data[collection], data);
           } else if (typeof data === "number") {
-            if (Data[collection][data] != undefined) {
+            if (Data[collection][data] !== undefined) {
               return Data[collection][data];
             } else {
               return new Error("Invalid Id");
@@ -167,7 +167,7 @@ class CURD {
   }
   getId(obj, count = "") {
     var temp = [];
-    if (count == "" && typeof count != "number") {
+    if (count === "" && typeof count != "number") {
       obj.forEach((e) => {
         if ("objectId" in e) {
           temp.push(e.objectId);
@@ -208,7 +208,7 @@ class CURD {
   }
   deleteField(collection, index = "", field) {
     if (this.existsCollection(collection)) {
-      if (index == "" && typeof index != "number") {
+      if (index === "" && typeof index != "number") {
         throw new Error("Index Required");
       } else {
         var Data = JSON.parse(localStorage.getItem(this.env.dbname));
@@ -231,7 +231,7 @@ class CURD {
   deleteCollection(collection, index = "") {
     if (this.existsCollection(collection)) {
       var Data = JSON.parse(localStorage.getItem(this.env.dbname));
-      if (index == "" && typeof index != "number") {
+      if (index === "" && typeof index != "number") {
         delete Data[collection];
         localStorage.setItem(this.env.dbname, JSON.stringify(Data));
       } else {
@@ -256,7 +256,7 @@ class CURD {
     localStorage.setItem(this.env.dbname, JSON.stringify(Data));
   }
   uD(collection, index, updatedData) {
-    if (index == "" && typeof index != "number") {
+    if (index === "" && typeof index != "number") {
       throw new Error("Index Required");
     } else {
       var Data = JSON.parse(localStorage.getItem(this.env.dbname));
@@ -287,7 +287,7 @@ class CURD {
       if (typeof index == "undefined") {
         throw new Error("Index Required");
       } else {
-        if (updatedData == "") {
+        if (updatedData === "") {
           throw new Error("Expected Object got none");
         } else {
           if (Array.isArray(index)) {

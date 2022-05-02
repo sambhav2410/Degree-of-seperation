@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from "react";
+import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
 import View from "./pages/view/View";

@@ -40,7 +40,7 @@ export default function View() {
     e.preventDefault();
     const user1 = ref.current.value;
     const user2 = ref2.current.value;
-    if (user1 == "" || user2 == "") {
+    if (user1 === "" || user2 === "") {
       toast.error("Select 2 name first");
     } else {
       if (user1 === user2) {
@@ -116,7 +116,7 @@ const Box = (props) => {
 const Singlenode = (props) => {
   return (
     <>
-      <span className="indi">{props.index == 0 ? "" : ">"}</span>
+      <span className="indi">{props.index === 0 ? "" : ">"}</span>
       <div style={{ color: "white" }} className="singlenode">
         {props.name}
       </div>

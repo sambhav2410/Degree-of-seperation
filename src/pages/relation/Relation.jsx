@@ -24,7 +24,7 @@ export default function Relation() {
     e.preventDefault();
     const user1 = ref.current.value;
     const user2 = ref2.current.value;
-    if(user1=='' || user2==""){
+    if(user1==='' || user2===""){
       toast.error("Choose friends first");
     }else{
       if (user1 === user2) {
@@ -40,8 +40,8 @@ export default function Relation() {
           for (let i = 0; i < all.length; i++) {
             const c = all[i];
             if (
-              (c[0] == pair[0] && c[1] == pair[1]) ||
-              (c[1] == pair[0] && c[0] == pair[1])
+              (c[0] === pair[0] && c[1] === pair[1]) ||
+              (c[1] === pair[0] && c[0] === pair[1])
             ) {
               count++;
             }
