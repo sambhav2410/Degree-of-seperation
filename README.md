@@ -8,8 +8,7 @@ connected.
 
 In the app...
 1. You should be able to add people.
-2. You should be able to add types of relationships (for simplicity, you can just add one
-- friend).
+2. You should be able to add types of relationships (for simplicity, you can just add one friend).
 3. You should be able to set the relationships between two people. (Eg. Rahul is a
 friend of Sunny)
 
